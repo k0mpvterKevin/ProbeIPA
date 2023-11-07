@@ -1,0 +1,13 @@
+ body {
+   font-family: Arial, sans-serif;
+ }
+ table {
+   border-collapse: collapse;
+ }
+
+ td, th {
+   border: none;
+ }
+.highlight {
+  background-color: #e1ffdd;
+}

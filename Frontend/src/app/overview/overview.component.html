@@ -1,0 +1,22 @@
+<body xmlns:th="http://www.w3.org/1999/xhtml">
+<table>
+  <thead>
+  <tr>
+    <th>IBANt</th>
+    <th>Balance</th>
+    <th>Overdraft</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let account of accounts$ | async">
+    <td [innerHTML]="account.iban"></td>
+    <td [innerHTML]="account.balance"></td>
+    <td [innerHTML]="account.overdraft"></td>
+  </tr>
+  </tbody>
+</table>
+
+<button onclick="location.href='/withdraw'">Withdraw</button>
+<button onclick="location.href='/deposit'">Deposit</button>
+<button onclick="location.href='/transfer'">Transfer</button>
+</body>
