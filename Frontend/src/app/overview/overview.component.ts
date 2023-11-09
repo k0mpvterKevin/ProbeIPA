@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import {Observable} from "rxjs";
+import {Observable, Subscription} from "rxjs";
 import {Account} from "../model/Account";
 import {AccountService} from "../services/account.service";
+import {Customer} from "../model/Customer";
 
 @Component({
   selector: 'app-overview',
@@ -10,9 +11,16 @@ import {AccountService} from "../services/account.service";
 })
 export class OverviewComponent{
 
-  accounts$ : Observable<Account[]> = this.accountService.loadAccounts();
+  customers : Customer[] = [];
+  accounts : Account [] = [];
+  customer: number = 0;
 
   constructor(private accountService : AccountService) {
   }
+
+
+
+  accounts$ : Observable<Account[]> = this.accountService.loadAccounts();
+
 
 }

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*
 class AccountController(private val accountRepository: AccountRepository) {
 
     @GetMapping("/all")
-    fun getAllAccounts(@PathVariable id : Int) : ResponseEntity<List<Account>> {
+    fun getAllAccounts() : ResponseEntity<List<Account>> {
         val accounts = accountRepository.findAll()
         return ResponseEntity(accounts, HttpStatus.OK)
     }

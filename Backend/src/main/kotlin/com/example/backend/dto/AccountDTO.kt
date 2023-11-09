@@ -5,5 +5,5 @@ data class AccountDTO(
     val iban: String,
     val balance: Int,
     val overdraft: Long,
-    val customerID: Int
+    val customerId: Int
 )

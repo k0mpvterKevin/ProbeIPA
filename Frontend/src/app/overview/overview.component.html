@@ -2,16 +2,16 @@
 <table>
   <thead>
   <tr>
-    <th>IBANt</th>
+    <th>IBAN</th>
     <th>Balance</th>
     <th>Overdraft</th>
   </tr>
-  </thead>
+ </thead>
   <tbody>
   <tr *ngFor="let account of accounts$ | async">
-    <td [innerHTML]="account.iban"></td>
-    <td [innerHTML]="account.balance"></td>
-    <td [innerHTML]="account.overdraft"></td>
+    <td>{{account.iban}}</td>
+    <td>{{account.balance}}</td>
+    <td>{{account.overdraft}}</td>
   </tr>
   </tbody>
 </table>
@@ -20,3 +20,4 @@
 <button onclick="location.href='/deposit'">Deposit</button>
 <button onclick="location.href='/transfer'">Transfer</button>
 </body>
+
