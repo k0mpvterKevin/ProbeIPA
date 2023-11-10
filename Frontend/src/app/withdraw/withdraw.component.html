@@ -1,0 +1,55 @@
+<body xmlns:th="http://www.w3.org/1999/xhtml">
+<div class="mainContainer">
+
+  <div class="mainWindowContainer">
+    <div class="headerContainer">
+      <h3 class="title">
+        Withdraw
+      </h3>
+    </div>
+    <div class="contentContainer">
+      <div class="basicContentContainer">
+        <div class="helperTextContainer">
+          <p class="helperText">
+            Choose an account to withdraw from:
+          </p>
+        </div>
+        <div class="ContentContainerTableContainer">
+          <table>
+            <thead class="tableHeader">
+            <tr>
+              <th>IBAN</th>
+              <th>Balance</th>
+              <th>Overdraft</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let account of accounts$ | async">
+              <td>{{account.iban}}</td>
+              <td>{{account.balance}}</td>
+              <td>{{account.overdraft}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <div class="footerContainer">
+      <div class="footerButtonsContainer">
+        <div class="tertiaryActionContainer">
+          <button type="button" class="btn btn-tertiary" onclick="location.href='/cancel'">Cancel</button>
+        </div>
+        <div class="ctaButtonContainer">
+          <button type="button" class="btn btn-primary" onclick="location.href='/next'">next</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+

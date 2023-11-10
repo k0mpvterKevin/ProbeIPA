@@ -11,14 +11,8 @@ import {Customer} from "../model/Customer";
 })
 export class OverviewComponent{
 
-  customers : Customer[] = [];
-  accounts : Account [] = [];
-  customer: number = 0;
-
   constructor(private accountService : AccountService) {
   }
-
-
 
   accounts$ : Observable<Account[]> = this.accountService.loadAccounts();
 

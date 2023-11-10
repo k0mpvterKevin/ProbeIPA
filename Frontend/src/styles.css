@@ -1,6 +1,10 @@
  body {
    font-family: Arial, sans-serif;
  }
+
+ p {
+   margin: 0;
+ }
  table {
    border-collapse: collapse;
  }
@@ -10,4 +14,97 @@
  }
 .highlight {
   background-color: #e1ffdd;
+}
+
+.title {
+  text-decoration: underline;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mainWindowContainer {
+  padding: 50px;
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+  background: #EFEFEF;
+  width: 700px;
+  height: 40vh;
+  border: 5px solid #000;
+}
+
+.headerContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.rightSideSecondaryActionContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.contentContainerTitle{
+  text-decoration: underline;
+}
+
+.btn-tertiary {
+  color: black;
+  background: transparent;
+  border-color: black;
+  width: 120px;
+}
+
+.footerButtonsContainer{
+  display: grid;
+  grid-template-columns: 1fr 5fr 2fr 2fr;
+}
+
+.tertiaryActionContainer {
+  grid-column-start: 1;
+}
+
+.ctaButtonContainer{
+  grid-column-start: 4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-secondary{
+  width: 120px;
+}
+
+.btn-primary {
+  width: 120px;
+}
+
+.btn-tertiary:hover{
+
+}
+
+.basicContentContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.helperTextContainer{
+  margin: 10px;
+}
+
+.tableHeader{
+  border-bottom: transparent solid 5px;
+}
+th{
+  border-right: transparent solid 10px;
+}
+
+td{
+  border-right: transparent solid 10px;
+
 }
